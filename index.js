@@ -29,8 +29,6 @@ openDialogButton.addEventListener('click', (event) => {
         el = el.parentElement;
       }
     },
-    // iOS Safari15にて、スクロールバーが変な長さになるの防げる
-    reserveScrollBarGap: true,
   });
 });
 
