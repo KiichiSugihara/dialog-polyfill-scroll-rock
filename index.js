@@ -10,6 +10,7 @@ const disableBodyScroll = bodyScrollLock.disableBodyScroll;
 const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
 const containerElement = document.getElementById('container');
+const dialogElement = document.getElementById('dialogTitle');
 const openDialogButton = document.getElementById('openDialogButton');
 const closeDialogButton = document.getElementById('closeDialogButton');
 
@@ -30,6 +31,8 @@ openDialogButton.addEventListener('click', (event) => {
       }
     },
   });
+  // 常時Titleが見えるように表示
+  dialogTitle.scrollIntoView(true);
 });
 
 closeDialogButton.addEventListener('click', (event) => {
