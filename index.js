@@ -31,8 +31,8 @@ openDialogButton.addEventListener('click', (event) => {
       }
     },
   });
-  // 常時Titleが見えるように表示
-  dialogTitle.scrollIntoView(true);
+  // 常時Titleが見えるように表示したい()
+  // dialogTitle.scrollIntoView(true);
 });
 
 closeDialogButton.addEventListener('click', (event) => {

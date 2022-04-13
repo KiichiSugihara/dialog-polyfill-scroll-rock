@@ -9,7 +9,7 @@
 
 .c-dialog {
   width: 320px;
-  padding: 20px;
   height: 300px;
+  padding: 20px;
   overflow-y: scroll;
 }
