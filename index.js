@@ -31,9 +31,6 @@ openDialogButton.addEventListener('click', (event) => {
       }
     },
   });
-  // 常時Titleが見えるように表示したい()
-  // 今だとボタンが下にあるので、focus自動移動してしまう。
-  // dialogTitle.scrollIntoView(true);
 });
 
 closeDialogButton.addEventListener('click', (event) => {
@@ -46,7 +43,6 @@ closeDialogButton.addEventListener('click', (event) => {
 dialog.addEventListener('click', (event) => {
   if (event.target === dialog) {
     // これ、全部で動くのか疑惑ある。
-    // dialog.close('cancelled');
     dialog.close();
     enableBodyScroll(containerElement);
   }
