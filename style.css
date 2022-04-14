@@ -1,7 +1,4 @@
 #openDialogButton {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   color: white;
   background-color: black;
   height: 40px;
@@ -12,4 +9,8 @@
   height: 300px;
   padding: 20px;
   overflow-y: scroll;
+  /* dialog利用できる際、上にスクロールされる問題の対処 Dialog対応のChromeだけにしたい*/
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
 }
