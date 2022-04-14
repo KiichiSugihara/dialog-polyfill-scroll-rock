@@ -2,7 +2,7 @@
 import './style.css';
 
 // dialog polyfill
-const dialog = document.querySelector('dialog');
+const dialog = document.getElementById('dialog');
 dialogPolyfill.registerDialog(dialog);
 
 // BodyScrollLock
@@ -10,6 +10,7 @@ const disableBodyScroll = bodyScrollLock.disableBodyScroll;
 const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
 const containerElement = document.getElementById('container');
+// const dialogTitle = document.getElementById('dialogTitle');
 const openDialogButton = document.getElementById('openDialogButton');
 const closeDialogButton = document.getElementById('closeDialogButton');
 
@@ -35,4 +36,14 @@ openDialogButton.addEventListener('click', (event) => {
 closeDialogButton.addEventListener('click', (event) => {
   // Dialog閉じたら、bodyLock
   enableBodyScroll(containerElement);
+});
+
+// 背景クリックした際、Dialog閉じる
+// TODO: コピってきただけなので、あとで、綺麗にする
+dialog.addEventListener('click', (event) => {
+  if (event.target === dialog) {
+    // これ、全部で動くのか疑惑ある。
+    dialog.close();
+    enableBodyScroll(containerElement);
+  }
 });
